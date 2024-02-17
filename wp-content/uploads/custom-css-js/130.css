@@ -1,0 +1,39 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+
+@media only screen and (max-width: 1024px) {
+  .wp-block-group.ticss-a8108d92.is-layout-flow.wp-container-core-group-layout-7.wp-block-group-is-layout-flow {
+    padding-right: 0;
+  }
+
+  .wp-block-group.is-layout-flow.wp-block-group-is-layout-flow {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wp-block-group.ticss-a8108d92.is-layout-flow.wp-container-core-group-layout-7.wp-block-group-is-layout-flow {
+    padding-right: 0;
+  }
+
+  .wp-block-group.is-layout-flow.wp-block-group-is-layout-flow {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* Add your CSS code here.
+
+For example:
+.example {
+    color: red;
+}
+
+For brushing up on your CSS knowledge, check out http://www.w3schools.com/css/css_syntax.asp
+
+End of comment */ 
+
+</style>
+<!-- end Simple Custom CSS and JS -->

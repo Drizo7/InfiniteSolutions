@@ -1,0 +1,321 @@
+/*
+Theme Name: Suku
+Theme URI: https://sitenerdy.com/suku/
+Author: SiteNerdy
+Author URI: https://sitenerdy.com/
+Description: Suku is a free and minimal WordPress FSE theme. It is a Gutenberg-ready WordPress theme and is compatible with all blocks and patterns of WordPress. If you are building a portfolio or blog theme using FSE feature, you can use this theme. If you want to know what full site editing is, you can learn from here https://sitenerdy.com/wordpress-full-site-editing/
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 5.7
+Version: 1.0.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: suku
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, blog, portfolio, news
+*/
+
+/* CUSTOM CSS */
+
+:where(.wp-site-blocks)>* {
+    margin: 0;
+}
+
+.pos-r {
+    position: relative;
+    z-index: 0;
+}
+
+.pos-a {
+    position: absolute;
+}
+
+.pos-a.send-backward {
+    z-index: -1;
+}
+
+.has-box-shadow {
+    box-shadow: 0 53px 75px 0 rgba(0, 0, 0, 0.08);
+}
+
+.site-header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.hero-section {
+    position: relative;
+}
+
+.hero-img-col .pos-a {
+    top: -70px;
+    right: -30px;
+    max-width: 145px;
+    margin: 0;
+}
+
+.stats-section {
+    position: relative;
+    margin-top: -110px;
+}
+
+.tablet-up-absolute {
+    position: relative;
+}
+
+.show-tablet-up {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .show-tablet-up {
+        display: inline-block;
+    }
+
+    .pos-a.img-right {
+        top: 0;
+        right: -53%;
+    }
+
+    .tablet-up-absolute {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero-img-col .pos-a {
+        right: -60px;
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    .hero-img-col {
+        position: absolute;
+        top: -100px;
+        right: -200px;
+        max-width: 495px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .hero-section {
+        margin-top: 200px !important;
+        margin-bottom: 200px !important;
+    }
+
+    .hero-section>.wp-block-column {
+        flex-basis: 50% !important;
+    }
+
+    .pos-a.hero-img-col {
+        position: relative;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+
+    .pos-a.hero-img-col {
+        max-width: 500px;
+        margin-left: 50px;
+        margin-top: 120px;
+    }
+}
+
+.img-col img {
+    width: 100%;
+}
+
+.img-col .overlay-text {
+    bottom: 30px;
+    right: 15px;
+    max-width: 175px;
+}
+
+.homepage-cta-section {
+    position: relative;
+    z-index: 1;
+}
+
+.homepage-cta-section .content-box {
+    position: relative;
+    margin-bottom: -350px;
+    top: -200px;
+}
+
+/* REVIEWS SECTION */
+@media screen and (max-width: 781px) {
+
+    .reviews-section .wp-block-column .wp-block-spacer {
+        height: 0 !important;
+    }
+
+    .reviews-section .wp-block-column p+.wp-block-image {
+        margin-top: 20px;
+    }
+}
+
+/* QUERY LOOP POST */
+.wp-block-query .wp-block-post-featured-image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.wp-block-query .wp-block-post-featured-image img {
+    height: 350px;
+    object-fit: cover;
+}
+
+/* PAGINATON */
+.wp-block-query-pagination>.wp-block-query-pagination-next,
+.wp-block-query-pagination>.wp-block-query-pagination-numbers,
+.wp-block-query-pagination>.wp-block-query-pagination-previous {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.wp-block-query-pagination-numbers {
+    display: flex;
+    gap: 24px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.page-numbers.current {
+    color: var(--wp--preset--color--custom-primary-button);
+}
+
+/* SIDEBAR */
+.sidebar-recent-posts.wp-block-latest-posts li {
+    margin-bottom: 24px;
+}
+
+.sidebar-recent-posts .wp-block-latest-posts__featured-image {
+    width: 123px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar-recent-posts .wp-block-latest-posts__featured-image a {
+    display: block;
+}
+
+.sidebar-recent-posts .wp-block-latest-posts__featured-image img {
+    width: 100%;
+    display: block;
+}
+
+.sidebar-recent-posts .wp-block-latest-posts__post-title {
+    display: block;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.sidebar-recent-posts .wp-block-latest-posts__post-date {
+    display: block;
+    overflow: hidden;
+    color: var(--wp--preset--color--custom-primary-button);
+    font-size: 16px;
+}
+
+.sidebar-recent-posts .wp-block-latest-posts__post-excerpt {
+    display: block;
+    overflow: hidden;
+}
+
+/* SINGLE POST / PAGE */
+.wp-block-post-author__name {
+    font-size: 20px;
+    color: var(--wp--preset--color--custom-primary-button);
+}
+
+.single .wp-block-post-author {
+    position: relative;
+}
+
+.single .wp-block-post-author__avatar {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.single .wp-block-post-author__avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.single .wp-block-post-author .wp-block-post-author__avatar+.wp-block-post-author__content {
+    padding-left: 125px;
+}
+
+.single .wp-block-post-author .wp-block-post-author__avatar+.wp-block-post-author__content .wp-block-post-author__name {
+    font-size: 24px;
+    color: var(--wp--preset--color--custom-footer-background);
+}
+
+.wp-block-post-comments-form {
+    margin-bottom: 160px;
+}
+
+.wp-block-post-content ul,
+.wp-block-post-content ol {
+    margin-bottom: 24px;
+}
+
+.wp-block-post-content li {
+    margin-bottom: 20px;
+}
+
+.wp-block-post-content li>ul {
+    margin-top: 1rem;
+}
+
+.footer-top-col .wp-block-navigation .wp-block-navigation-item__label {
+    line-height: 1.5;
+}
+
+.review-type-2 .wp-block-image {
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 781px) {
+
+    .review-type-1,
+    .review-type-2 {
+        margin-bottom: 2rem;
+    }
+
+    .review-type-2 {
+        display: grid;
+    }
+
+    .review-type-2>* {
+        order: 2;
+    }
+
+    .review-type-2 .wp-block-image {
+        order: 1;
+    }
+
+    .footer-top-col {
+        margin-bottom: 2rem !important;
+    }
+
+    .footer-top-col .wp-block-heading {
+        margin-bottom: 20px !important;
+    }
+
+    .footer-bottom-col-right p {
+        text-align: left;
+    }
+}
